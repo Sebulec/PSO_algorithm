@@ -7,17 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */; };
+		EC5FF44C284FDACF00931BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF44B284FDACF00931BD5 /* ContentView.swift */; };
+		EC5FF44E284FDAD000931BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF44D284FDAD000931BD5 /* Assets.xcassets */; };
+		EC5FF451284FDAD000931BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */; };
+		EC5FF459284FE1C000931BD5 /* LineChartCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */; };
 		ECB632C1284A9DC7002C16BA /* PSOAlgorithm.docc in Sources */ = {isa = PBXBuildFile; fileRef = ECB632C0284A9DC7002C16BA /* PSOAlgorithm.docc */; };
 		ECB632C2284A9DC7002C16BA /* PSOAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB632BF284A9DC7002C16BA /* PSOAlgorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB632C9284A9FE7002C16BA /* Swarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB632C8284A9FE7002C16BA /* Swarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC5FF447284FDACF00931BD5 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
+		EC5FF44B284FDACF00931BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC5FF44D284FDAD000931BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCircleView.swift; sourceTree = "<group>"; };
 		ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSOAlgorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB632BF284A9DC7002C16BA /* PSOAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSOAlgorithm.h; sourceTree = "<group>"; };
 		ECB632C0284A9DC7002C16BA /* PSOAlgorithm.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PSOAlgorithm.docc; sourceTree = "<group>"; };
+		ECB632C8284A9FE7002C16BA /* Swarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC5FF444284FDACF00931BD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECB632B9284A9DC7002C16BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -28,10 +48,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC5FF448284FDACF00931BD5 /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				EC5FF45A284FE1C500931BD5 /* Chart */,
+				EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */,
+				EC5FF44B284FDACF00931BD5 /* ContentView.swift */,
+				EC5FF44D284FDAD000931BD5 /* Assets.xcassets */,
+				EC5FF44F284FDAD000931BD5 /* Preview Content */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		EC5FF44F284FDAD000931BD5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC5FF45A284FE1C500931BD5 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		ECB632B2284A9DC7002C16BA = {
 			isa = PBXGroup;
 			children = (
 				ECB632BE284A9DC7002C16BA /* PSOAlgorithm */,
+				EC5FF448284FDACF00931BD5 /* DemoApp */,
 				ECB632BD284A9DC7002C16BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */,
+				EC5FF447284FDACF00931BD5 /* DemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -49,6 +99,7 @@
 			children = (
 				ECB632BF284A9DC7002C16BA /* PSOAlgorithm.h */,
 				ECB632C0284A9DC7002C16BA /* PSOAlgorithm.docc */,
+				ECB632C8284A9FE7002C16BA /* Swarm.swift */,
 			);
 			path = PSOAlgorithm;
 			sourceTree = "<group>";
@@ -67,6 +118,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EC5FF446284FDACF00931BD5 /* DemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC5FF454284FDAD000931BD5 /* Build configuration list for PBXNativeTarget "DemoApp" */;
+			buildPhases = (
+				EC5FF443284FDACF00931BD5 /* Sources */,
+				EC5FF444284FDACF00931BD5 /* Frameworks */,
+				EC5FF445284FDACF00931BD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoApp;
+			packageProductDependencies = (
+			);
+			productName = DemoApp;
+			productReference = EC5FF447284FDACF00931BD5 /* DemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		ECB632BB284A9DC7002C16BA /* PSOAlgorithm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECB632C5284A9DC7002C16BA /* Build configuration list for PBXNativeTarget "PSOAlgorithm" */;
@@ -92,8 +162,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					EC5FF446284FDACF00931BD5 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					ECB632BB284A9DC7002C16BA = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -108,16 +182,28 @@
 				Base,
 			);
 			mainGroup = ECB632B2284A9DC7002C16BA;
+			packageReferences = (
+			);
 			productRefGroup = ECB632BD284A9DC7002C16BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				ECB632BB284A9DC7002C16BA /* PSOAlgorithm */,
+				EC5FF446284FDACF00931BD5 /* DemoApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC5FF445284FDACF00931BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5FF451284FDAD000931BD5 /* Preview Assets.xcassets in Resources */,
+				EC5FF44E284FDAD000931BD5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECB632BA284A9DC7002C16BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,10 +214,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC5FF443284FDACF00931BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5FF44C284FDACF00931BD5 /* ContentView.swift in Sources */,
+				EC5FF459284FE1C000931BD5 /* LineChartCircleView.swift in Sources */,
+				EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECB632B8284A9DC7002C16BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB632C9284A9FE7002C16BA /* Swarm.swift in Sources */,
 				ECB632C1284A9DC7002C16BA /* PSOAlgorithm.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +236,64 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		EC5FF452284FDAD000931BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DemoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KDCQ2PRYNK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Organization.DemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC5FF453284FDAD000931BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DemoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KDCQ2PRYNK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Organization.DemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		ECB632C3284A9DC7002C16BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -316,6 +471,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC5FF454284FDAD000931BD5 /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5FF452284FDAD000931BD5 /* Debug */,
+				EC5FF453284FDAD000931BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ECB632B6284A9DC7002C16BA /* Build configuration list for PBXProject "PSOAlgorithm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
