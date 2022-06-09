@@ -8,36 +8,45 @@
 import SwiftUI
 
 struct LineChartCircleView: View {
-  var dataPoints: [Double]
-  var radius: CGFloat
-
-  var highestPoint: Double {
-    let max = dataPoints.max() ?? 1.0
-    if max == 0 { return 1.0 }
-    return max
-  }
-
-  var body: some View {
-    GeometryReader { geometry in
-      let height = geometry.size.height
-      let width = geometry.size.width
-
-      Path { path in
-        for index in 1..<dataPoints.count {
-            path.addEllipse(
-                in: .init(
-                    x: CGFloat(index) * width / CGFloat(dataPoints.count - 1),
-                    y: height * ratio(for: index),
-                    width: radius,
-                    height: radius
-                )
-            )
-        }
-      }
-      .fill(Color.accentColor)
+    var dataPoints: [Point2D]
+    var radius: CGFloat
+    
+    var highestPoint: Double {
+        let max = dataPoints.maxY() ?? 1.0
+        if max == 0 { return 1.0 }
+        return max
     }
-    .padding(.vertical)
-  }
+    
+    var body: some View {
+        GeometryReader { geometry in
+            let height = geometry.size.height
+            let width = geometry.size.width
+            
+            Path { path in
+                for index in 0..<dataPoints.count {
+                let point = dataPoints[index]
+                    path.addEllipse(
+                        in: .init(
+                            x: point.x * width / CGFloat(dataPoints.count),
+                            y: height * ratio(for: point.y),
+                            width: radius,
+                            height: radius
+                        )
+                    )
+                }
+                
+            }
+            .fill(Color.accentColor)
+        }
+        .padding(.vertical)
+    }
+    
+    private func ratio(for y: Double) -> Double { 1 - y / highestPoint }
+}
 
-  private func ratio(for index: Int) -> Double { 1 - (dataPoints[index] / highestPoint) }
+private extension Array where Element == Point2D {
+    func maxY() -> Double? { map { $0.y }.max() }
+    func minY() -> Double? { map { $0.y }.min() }
+    func maxX() -> Double? { map { $0.x }.max() }
+    func minX() -> Double? { map { $0.x }.min() }
 }

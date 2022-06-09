@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2509902852863E004C8416 /* TouchLocatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25098F2852863E004C8416 /* TouchLocatingView.swift */; };
+		EC25099228528727004C8416 /* Point2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25099128528727004C8416 /* Point2D.swift */; };
 		EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */; };
 		EC5FF44C284FDACF00931BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF44B284FDACF00931BD5 /* ContentView.swift */; };
 		EC5FF44E284FDAD000931BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF44D284FDAD000931BD5 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC25098F2852863E004C8416 /* TouchLocatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchLocatingView.swift; sourceTree = "<group>"; };
+		EC25099128528727004C8416 /* Point2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point2D.swift; sourceTree = "<group>"; };
 		EC5FF447284FDACF00931BD5 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
 		EC5FF44B284FDACF00931BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */,
+				EC25098F2852863E004C8416 /* TouchLocatingView.swift */,
+				EC25099128528727004C8416 /* Point2D.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -219,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5FF44C284FDACF00931BD5 /* ContentView.swift in Sources */,
+				EC25099228528727004C8416 /* Point2D.swift in Sources */,
+				EC2509902852863E004C8416 /* TouchLocatingView.swift in Sources */,
 				EC5FF459284FE1C000931BD5 /* LineChartCircleView.swift in Sources */,
 				EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */,
 			);
