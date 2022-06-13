@@ -14,6 +14,7 @@
 		EC5FF44E284FDAD000931BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF44D284FDAD000931BD5 /* Assets.xcassets */; };
 		EC5FF451284FDAD000931BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */; };
 		EC5FF459284FE1C000931BD5 /* LineChartCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */; };
+		ECA78A1B2853D8BE00686356 /* ChartRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA78A1A2853D8BE00686356 /* ChartRange.swift */; };
 		ECB632C1284A9DC7002C16BA /* PSOAlgorithm.docc in Sources */ = {isa = PBXBuildFile; fileRef = ECB632C0284A9DC7002C16BA /* PSOAlgorithm.docc */; };
 		ECB632C2284A9DC7002C16BA /* PSOAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB632BF284A9DC7002C16BA /* PSOAlgorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECB632C9284A9FE7002C16BA /* Swarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB632C8284A9FE7002C16BA /* Swarm.swift */; };
@@ -28,6 +29,7 @@
 		EC5FF44D284FDAD000931BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCircleView.swift; sourceTree = "<group>"; };
+		ECA78A1A2853D8BE00686356 /* ChartRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRange.swift; sourceTree = "<group>"; };
 		ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSOAlgorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB632BF284A9DC7002C16BA /* PSOAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSOAlgorithm.h; sourceTree = "<group>"; };
 		ECB632C0284A9DC7002C16BA /* PSOAlgorithm.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PSOAlgorithm.docc; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				EC5FF458284FE1C000931BD5 /* LineChartCircleView.swift */,
 				EC25098F2852863E004C8416 /* TouchLocatingView.swift */,
 				EC25099128528727004C8416 /* Point2D.swift */,
+				ECA78A1A2853D8BE00686356 /* ChartRange.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				EC5FF44C284FDACF00931BD5 /* ContentView.swift in Sources */,
 				EC25099228528727004C8416 /* Point2D.swift in Sources */,
+				ECA78A1B2853D8BE00686356 /* ChartRange.swift in Sources */,
 				EC2509902852863E004C8416 /* TouchLocatingView.swift in Sources */,
 				EC5FF459284FE1C000931BD5 /* LineChartCircleView.swift in Sources */,
 				EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */,
