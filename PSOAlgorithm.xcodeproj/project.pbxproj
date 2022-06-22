@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC19ABB128639A31008F0332 /* PSOAlgorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */; };
+		EC19ABB228639A31008F0332 /* PSOAlgorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC2509902852863E004C8416 /* TouchLocatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25098F2852863E004C8416 /* TouchLocatingView.swift */; };
 		EC25099228528727004C8416 /* Point2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25099128528727004C8416 /* Point2D.swift */; };
 		EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */; };
@@ -19,6 +21,20 @@
 		ECB632C2284A9DC7002C16BA /* PSOAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB632BF284A9DC7002C16BA /* PSOAlgorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECB632C9284A9FE7002C16BA /* Swarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB632C8284A9FE7002C16BA /* Swarm.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC19ABB328639A31008F0332 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC19ABB228639A31008F0332 /* PSOAlgorithm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EC25098F2852863E004C8416 /* TouchLocatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchLocatingView.swift; sourceTree = "<group>"; };
@@ -41,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC19ABB128639A31008F0332 /* PSOAlgorithm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC19ABAF28639A21008F0332 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC5FF448284FDACF00931BD5 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +115,7 @@
 				ECB632BE284A9DC7002C16BA /* PSOAlgorithm */,
 				EC5FF448284FDACF00931BD5 /* DemoApp */,
 				ECB632BD284A9DC7002C16BA /* Products */,
+				EC19ABAF28639A21008F0332 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +159,7 @@
 				EC5FF443284FDACF00931BD5 /* Sources */,
 				EC5FF444284FDACF00931BD5 /* Frameworks */,
 				EC5FF445284FDACF00931BD5 /* Resources */,
+				EC19ABB328639A31008F0332 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Point2D {
-    let x, y: Double
-}
+//struct Point2D {
+//    let x, y: Double
+//}

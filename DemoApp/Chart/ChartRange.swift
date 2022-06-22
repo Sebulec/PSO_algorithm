@@ -5,8 +5,10 @@
 //  Created by kotars01 on 10/06/2022.
 //
 
-import Foundation
+import UIKit
 
 struct ChartRange {
-    let x, y: Double
+    let x, y: CGFloat
+    
+    func closedRange(for keyPath: KeyPath<Self, CGFloat>) -> ClosedRange<CGFloat> { 0...self[keyPath: keyPath] }
 }

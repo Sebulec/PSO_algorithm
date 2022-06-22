@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import PSOAlgorithm
 
 struct LineChartCircleView: View {
-    var dataPoints: [Point2D]
     var radius: CGFloat
-    var range: ChartRange
-    @Binding var viewInfo: ViewInfoDataModel
-    
+    @ObservedObject var viewInfo: ViewInfoDataModel
+    private var range: ChartRange { viewInfo.range }
+
     private var highestPoint: Double {
-        let max = dataPoints.maxY() ?? 1.0
+        let max = viewInfo.dataPoints.maxY() ?? 1.0
         if max == 0 { return 1.0 }
         return max
     }
@@ -25,8 +25,8 @@ struct LineChartCircleView: View {
             let width = geometry.size.width
             
             Path { path in
-                for index in 0..<dataPoints.count {
-                    let point = dataPoints[index]
+                for index in 0..<viewInfo.dataPoints.count {
+                    let point = viewInfo.dataPoints[index]
                     path.addEllipse(
                         in: .init(
                             x: point.ratio(range.x, realSize: width, for: \.x),
@@ -47,17 +47,17 @@ struct LineChartCircleView: View {
 }
 
 private extension Array where Element == Point2D {
-    func maxY() -> Double? { map { $0.y }.max() }
-    func minY() -> Double? { map { $0.y }.min() }
-    func maxX() -> Double? { map { $0.x }.max() }
-    func minX() -> Double? { map { $0.x }.min() }
+    func maxY() -> CGFloat? { map { $0.y }.max() }
+    func minY() -> CGFloat? { map { $0.y }.min() }
+    func maxX() -> CGFloat? { map { $0.x }.max() }
+    func minX() -> CGFloat? { map { $0.x }.min() }
 }
 
 private extension Point2D {
     func ratio(
-        _ range: Double,
+        _ range: CGFloat,
         realSize: CGFloat,
-        `for` keyPath: KeyPath<Self, Double>
+        `for` keyPath: KeyPath<Self, CGFloat>
     ) -> Double { self[keyPath: keyPath] / range * realSize }
 }
 
@@ -74,5 +74,32 @@ extension LineChartCircleView {
 }
 
 class ViewInfoDataModel: ObservableObject {
+    @Published var dataPoints: [Point2D] = []
     var size: CGSize = .zero
+    var pickedPoint: Point2D!
+    var range: ChartRange!
+    let treshold = 0.1
+    
+    var psoAlgorithm: PSOAlgorithm<Simple2DParticle, DistanceQualityFunction, Point2DRandomGenerator>?
+    
+    init(range: ChartRange) {
+        self.range = range
+    }
+    
+    func start() {
+        psoAlgorithm = PSOAlgorithm<Simple2DParticle, DistanceQualityFunction, Point2DRandomGenerator>(
+            qualityFunction: DistanceQualityFunction(treshold: treshold, pickedPoint: pickedPoint),
+            randomGenerator: .init(xRange: range.closedRange(for: \.x), yRange: range.closedRange(for: \.y))
+        )
+        psoAlgorithm?.initialSpread(numberOfItems: 10)
+        let newPoints: [Point2D] = psoAlgorithm?.swarm.map { $0.position } ?? []
+        
+        dataPoints.append(contentsOf: newPoints)
+    }
+    
+    func next() {
+        
+    }
 }
+
+
