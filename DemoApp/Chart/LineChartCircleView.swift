@@ -9,10 +9,11 @@ import SwiftUI
 import PSOAlgorithm
 
 struct LineChartCircleView: View {
-    var radius: CGFloat
     @ObservedObject var viewInfo: ViewInfoDataModel
+    var radius: CGFloat
+    
     private var range: ChartRange { viewInfo.range }
-
+    
     private var highestPoint: Double {
         let max = viewInfo.dataPoints.maxY() ?? 1.0
         if max == 0 { return 1.0 }
@@ -36,12 +37,24 @@ struct LineChartCircleView: View {
                         )
                     )
                 }
-                
             }
             .fill(Color.accentColor)
             .onChange(of: geometry.size, perform: { newValue in
                 viewInfo.size = newValue
             })
+            
+            if let pickedPoint = viewInfo.pickedPoint {
+                Path { path in
+                    path.addEllipse(
+                        in: .init(
+                            x: pickedPoint.ratio(range.x, realSize: width, for: \.x),
+                            y: pickedPoint.ratio(range.y, realSize: height, for: \.y),
+                            width: radius * 2,
+                            height: radius * 2
+                        )
+                    )
+                }.fill(.red)
+            }
         }
     }
 }
@@ -82,6 +95,8 @@ class ViewInfoDataModel: ObservableObject {
     
     var psoAlgorithm: PSOAlgorithm<Simple2DParticle, DistanceQualityFunction, Point2DRandomGenerator>?
     
+    private var iterationNumber = 0
+    
     init(range: ChartRange) {
         self.range = range
     }
@@ -91,14 +106,22 @@ class ViewInfoDataModel: ObservableObject {
             qualityFunction: DistanceQualityFunction(treshold: treshold, pickedPoint: pickedPoint),
             randomGenerator: .init(xRange: range.closedRange(for: \.x), yRange: range.closedRange(for: \.y))
         )
-        psoAlgorithm?.initialSpread(numberOfItems: 10)
+        iterationNumber = 0
+        
+        psoAlgorithm?.c1 = 0.1
+        psoAlgorithm?.c2 = 0.1
+        psoAlgorithm?.w = 0.1
+        
+        psoAlgorithm?.initialSpread(numberOfItems: 100)
         let newPoints: [Point2D] = psoAlgorithm?.swarm.map { $0.position } ?? []
         
         dataPoints.append(contentsOf: newPoints)
     }
     
     func next() {
-        
+        iterationNumber += 1
+        psoAlgorithm?.computeGeneration(n: iterationNumber)
+        dataPoints = psoAlgorithm?.swarm.map { $0.position } ?? []
     }
 }
 

@@ -9,26 +9,26 @@ import SwiftUI
 import PSOAlgorithm
 
 struct ContentView: View {
-    //    @State var dataPoints: [Point2D] = [.init(x: 1, y: 1), .init(x: 2, y: 2)]
     @StateObject var model = ViewInfoDataModel(
-        range: .init(x: 100, y: 100)
+        range: .init(x: 1000, y: 1000)
     )
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1/60, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
             LineChartCircleView(
-                radius: 10.0,
-                viewInfo: model
+                viewInfo: model,
+                radius: 10.0
             ).onPointTouch(perform: { location in
-                if model.pickedPoint == nil {
-                    model.pickedPoint = .init(x: location.x, y: location.y)
-                    model.start()
-                }
+                model.pickedPoint = .init(x: location.x, y: location.y)
+                model.start()
             })
             .background(Color.gray.opacity(0.1).cornerRadius(16))
             .accentColor(.green)
+            .onReceive(timer) { _ in
+                model.next()
+            }
         }
     }
 }
