@@ -10,7 +10,7 @@
 		EC19ABB128639A31008F0332 /* PSOAlgorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */; };
 		EC19ABB228639A31008F0332 /* PSOAlgorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECB632BC284A9DC7002C16BA /* PSOAlgorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC2509902852863E004C8416 /* TouchLocatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25098F2852863E004C8416 /* TouchLocatingView.swift */; };
-		EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */; };
+		EC5FF44A284FDACF00931BD5 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF449284FDACF00931BD5 /* DemoApp.swift */; };
 		EC5FF44C284FDACF00931BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5FF44B284FDACF00931BD5 /* ContentView.swift */; };
 		EC5FF44E284FDAD000931BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF44D284FDAD000931BD5 /* Assets.xcassets */; };
 		EC5FF451284FDAD000931BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		EC25098F2852863E004C8416 /* TouchLocatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchLocatingView.swift; sourceTree = "<group>"; };
 		EC5FF447284FDACF00931BD5 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
+		EC5FF449284FDACF00931BD5 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		EC5FF44B284FDACF00931BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC5FF44D284FDAD000931BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5FF450284FDAD000931BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				EC5FF45A284FE1C500931BD5 /* Chart */,
-				EC5FF449284FDACF00931BD5 /* DemoAppApp.swift */,
+				EC5FF449284FDACF00931BD5 /* DemoApp.swift */,
 				EC5FF44B284FDACF00931BD5 /* ContentView.swift */,
 				EC5FF44D284FDAD000931BD5 /* Assets.xcassets */,
 				EC5FF44F284FDAD000931BD5 /* Preview Content */,
@@ -254,7 +254,7 @@
 				ECA78A1B2853D8BE00686356 /* ChartRange.swift in Sources */,
 				EC2509902852863E004C8416 /* TouchLocatingView.swift in Sources */,
 				EC5FF459284FE1C000931BD5 /* LineChartCircleView.swift in Sources */,
-				EC5FF44A284FDACF00931BD5 /* DemoAppApp.swift in Sources */,
+				EC5FF44A284FDACF00931BD5 /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
